@@ -90,6 +90,9 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
+        viewport={{
+          once:true,
+        }}
         className="my-6 text-center text-3xl"
       >
         Get in Touch
@@ -101,12 +104,18 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{
+          once:true,
+        }}
       >
         <motion.label
           className="flex flex-col"
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{
+            once:true,
+          }}
         >
           <span className="text-white font-medium mb-2">Your Name</span>
           <input
@@ -124,6 +133,9 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
+          viewport={{
+            once:true,
+          }}
         >
           <span className="text-white font-medium mb-2">Your Email</span>
           <input
@@ -141,6 +153,9 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
+          viewport={{
+            once:true,
+          }}
         >
           <span className="text-white font-medium mb-2">Your Message</span>
           <textarea
@@ -161,6 +176,9 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
+          viewport={{
+            once:true,
+          }}
         >
           {loading ? "Sending..." : "Send"}
         </motion.button>
@@ -181,6 +199,9 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
+          viewport={{
+            once:true,
+          }}
           className="my-2"
         >
           {CONTACT.address}
@@ -189,6 +210,9 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1 }}
+          viewport={{
+            once:true,
+          }}
           className="my-2"
         >
           {CONTACT.phoneNo}

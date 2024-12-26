@@ -8,6 +8,9 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
+        viewport={{
+          once:true,
+        }}
         className="my-20 text-center text-4xl"
       >
         Projects
@@ -19,6 +22,9 @@ const Projects = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
+              viewport={{
+                once:true,
+              }}
               className="w-full lg:w-1/4"
             >
               <div className="relative w-full lg:w-60 h-80 overflow-hidden rounded-lg bg-neutral-800 shadow-md">
@@ -34,6 +40,9 @@ const Projects = () => {
                   className="absolute bottom-0 w-full h-1/4 bg-neutral-900 flex items-center justify-center opacity-90 group"
                   initial={{ opacity: 0.9 }}
                   whileHover={{ opacity: 1 }}
+                  viewport={{
+                    once:true,
+                  }}
                   transition={{ duration: 0.5 , delay: 0.5 }}
                 >
                   {/* View Source Code Button on hover */}
@@ -59,6 +68,9 @@ const Projects = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 1 }}
+              viewport={{
+                once:true,
+              }}
               className="w-full max-w-xl lg:w-3/4"
             >
               <h6 className="mb-2 font-semibold">{project.title}</h6>
