@@ -15,7 +15,7 @@ export const HERO_CONTENT = `I'm a passionate full-stack developer with a profou
         visually stunning and engaging experiences. My goal is advance and
         create visually appealing designs and projects to captivate the users.`;
 
-export const ABOUT_TEXT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. I have honed my skills in front-end technologies like Html, CSS and React, as well as back-end technologies like Node.js, MySQL,  and MongoDB. 
+export const ABOUT_TEXT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. I have honed my skills in front-end technologies like Html, CSS and React, as well as back-end technologies like Node.js, and MySQL. 
         My journey in software development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. Outside of coding, I enjoy staying active, playing sports, e-games, and exploring new technologies.
         My goal is to create advance and visually appealing designs and projects to captivate the users.`;
 
