@@ -1,5 +1,5 @@
 import { HERO_CONTENT } from "../constants";
-import profilePicture from "../assets/aavash.jpg";
+import profilePicture from "../assets/aavash.png";
 import { motion } from "motion/react";
 
 const container = (delay) => ({
@@ -50,7 +50,7 @@ const Hero = () => {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
-              className="w-[550px] rounded-2xl"
+              className="w-[500px] rounded-2xl"
               src={profilePicture}
               alt="Aavash Tamang"
             />
