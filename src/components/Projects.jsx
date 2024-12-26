@@ -21,13 +21,21 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="w-full lg:w-1/4"
             >
-              <img
-                src={project.image}
-                width={150}
-                height={150}
-                alt={project.title}
-                className="mb-6 rounded"
-              />
+              {/* Card container with fixed size */}
+              <div className="relative w-60 h-80 overflow-hidden rounded-lg bg-neutral-800 shadow-md">
+                {/* Image taking 3/4 of the container */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="absolute top-0 left-0 h-3/4 w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                />
+                {/* Bottom section (1/4 of container height) */}
+                <div className="absolute bottom-0 w-full h-1/4 bg-neutral-900 flex items-center justify-center">
+                  <p className="text-sm font-semibold text-neutral-400">
+                    {project.title}
+                  </p>
+                </div>
+              </div>
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
