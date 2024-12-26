@@ -1,76 +1,80 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project1 from "../assets/projects/hotel.png";
+import project2 from "../assets/projects/taxi.png";
+import project3 from "../assets/projects/futsal.png";
+import project4 from "../assets/projects/agewell.png";
+import project5 from "../assets/projects/portfolio.png";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I'm a passionate full-stack developer with a profound love for creating
+        visually stunning and engaging experiences. My goal is advance and
+        create visually appealing designs and projects to captivate the users.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. I have honed my skills in front-end technologies like Html, CSS and React, as well as back-end technologies like Node.js, MySQL,  and MongoDB. 
+        My journey in software development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. Outside of coding, I enjoy staying active, playing sports, e-games, and exploring new technologies.
+        My goal is to create advance and visually appealing designs and projects to captivate the users.`;
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    date: "May 2024 - Aug 2024",
+    role: "Full stack Developer",
+    company: "PCPS",
+    description: [
+      "Led a team in developing and maintaining web applications using JavaScript, React.js, Laravel and other related technologies.",
+      "Implemented APIs and integrated with MySQL databases. Collaborated with stakeholders to define project requirements and timelines.",
+      "Collaborating with cross-functional teams including designers and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+    technologies: ["React.js", "Tailwind.css", "Laravel", "MySQL"],
   },
 ];
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Hotel Booking System",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "Web-based platform that allows users to search, book, and manage hotel rooms of a certain hotel.",
+    technologies: ["Java", "MySQL"],
+
+    source_code_link:
+      "https://github.com/TAavash/Eclipse-Workspace/tree/main/java_project",
   },
   {
-    title: "Task Management App",
+    title: "Taxi Booking System",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "Web-based platform that allows users to search, book, and manage taxi ofor quick and safe trips.",
+    technologies: ["Python", "MySQL"],
+    source_code_link: "https://github.com/TAavash/Taxi-Booking-System",
+  },
+  {
+    title: "Futsal Booking System",
+    image: project3,
+    description:
+      "A comprehensive futsal booking platform that allows users to book futsals based on real-time availability.",
+    technologies: ["React", "Tailwind", "MongoDB", "Node.js"],
+    source_code_link: "https://github.com/TAavash/Futsal",
+  },
+  {
+    title: "Age Well",
+    image: project4,
+    description:
+      "A user-friendly mobile app that improves elders' quality of life by encouraging independence, assuring safety, and building meaningful connections. It's key features include health tracking, voice commands, service booking, and social engagement activities.",
+    technologies: ["Flutter", "Dart", "Firebase"],
+    source_code_link: "https://github.com/TAavash/AgeWell",
   },
   {
     title: "Portfolio Website",
-    image: project3,
+    image: project5,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+    technologies: ["React", "Tailwind"],
+    source_code_link: "https://github.com/TAavash/My-Portfolio",
   },
 ];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  address: "Lalitpur, Nepal",
+  phoneNo: "+977 9812211534",
+  email: "aavashlopchan@gmail.com",
 };
