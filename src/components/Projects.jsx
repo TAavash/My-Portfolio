@@ -21,20 +21,38 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="w-full lg:w-1/4"
             >
-              {/* Card container with fixed size */}
-              <div className="relative w-60 h-80 overflow-hidden rounded-lg bg-neutral-800 shadow-md">
-                {/* Image taking 3/4 of the container */}
+              <div className="relative w-full lg:w-60 h-80 overflow-hidden rounded-lg bg-neutral-800 shadow-md">
+                {/* Image with better fit */}
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="absolute top-0 left-0 h-3/4 w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                  className="absolute top-0 left-0 w-full h-full object-contain transition-transform duration-300 ease-in-out hover:scale-110"
                 />
-                {/* Bottom section (1/4 of container height) */}
-                <div className="absolute bottom-0 w-full h-1/4 bg-neutral-900 flex items-center justify-center">
-                  <p className="text-sm font-semibold text-neutral-400">
+
+                {/* Bottom section with hover animation */}
+                <motion.div
+                  className="absolute bottom-0 w-full h-1/4 bg-neutral-900 flex items-center justify-center opacity-90 group"
+                  initial={{ opacity: 0.9 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.5 , delay: 0.5 }}
+                >
+                  {/* View Source Code Button on hover */}
+                  <div className="group-hover:flex hidden transition-all">
+                    <a
+                      href={project.source_code_link} // Replace with your source code link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 text-white font-semibold rounded-lg hover:bg-white hover:text-black"
+                    >
+                      View Source Code
+                    </a>
+                  </div>
+
+                  {/* Text as fallback */}
+                  <p className="text-sm font-semibold text-neutral-400 group-hover:hidden">
                     {project.title}
                   </p>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
             <motion.div

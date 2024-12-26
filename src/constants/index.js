@@ -4,6 +4,13 @@ import project3 from "../assets/projects/futsal.png";
 import project4 from "../assets/projects/agewell.png";
 import project5 from "../assets/projects/portfolio.png";
 
+export const SOCIALLINKS = {
+  linkedin: "www.linkedin.com/in/aavash-tamang-131a0a2b5",
+  github: "https://github.com/TAavash",
+  instagram: "https://www.instagram.com/aavashtamang10/",
+};
+
+
 export const HERO_CONTENT = `I'm a passionate full-stack developer with a profound love for creating
         visually stunning and engaging experiences. My goal is advance and
         create visually appealing designs and projects to captivate the users.`;
