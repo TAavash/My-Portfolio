@@ -13,16 +13,23 @@ const Navbar = () => {
           href={SOCIALLINKS.linkedin}
           target="_blank"
           rel="noopener noreferrer"
+          className="transition-transform transform hover:scale-110"
         >
           <FaLinkedin />
         </a>
-        <a href={SOCIALLINKS.github} target="_blank" rel="noopener noreferrer">
+        <a
+          href={SOCIALLINKS.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-transform transform hover:scale-110"
+        >
           <FaGithub />
         </a>
         <a
           href={SOCIALLINKS.instagram}
           target="_blank"
           rel="noopener noreferrer"
+          className="transition-transform transform hover:scale-110"
         >
           <FaInstagram />
         </a>

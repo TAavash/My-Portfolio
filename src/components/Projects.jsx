@@ -42,7 +42,7 @@ const Projects = () => {
                       href={project.source_code_link} // Replace with your source code link
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 text-white font-semibold rounded-lg hover:bg-white hover:text-black"
+                      className="px-4 py-2 text-white font-semibold rounded-lg hover:underline"
                     >
                       View Source Code
                     </a>
