@@ -5,7 +5,7 @@ import project4 from "../assets/projects/agewell.png";
 import project5 from "../assets/projects/portfolio.png";
 
 export const SOCIALLINKS = {
-  linkedin: "www.linkedin.com/in/aavash-tamang-131a0a2b5",
+  linkedin: "https://www.linkedin.com/in/aavash-tamang-131a0a2b5/",
   github: "https://github.com/TAavash",
   instagram: "https://www.instagram.com/aavashtamang10/",
 };
