@@ -1,6 +1,7 @@
 import aboutImg from "../assets/about.jpg";
 import { ABOUT_TEXT } from "../constants";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
+import { Tilt } from "react-tilt";
 
 const About = () => {
   return (
@@ -20,7 +21,15 @@ const About = () => {
           className="w-full lg:w-1/2 lg:p-8"
         >
           <div className="flex items-center justify-center">
-            <img className="rounded-2xl p-2" src={aboutImg} alt="about" />
+            <Tilt
+              options={{
+                max: 5,
+                scale: 1,
+                speed: 150,
+              }}
+            >
+              <img className="rounded-2xl p-2" src={aboutImg} alt="about" />
+            </Tilt>
           </div>
         </motion.div>
         <motion.div
