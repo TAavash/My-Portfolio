@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { CONTACT } from "../constants";
 import { motion } from "motion/react";
@@ -12,6 +12,18 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false); // New state to track success or failure
+  
+  // Validation function
+  const validateForm = () => {
+    const { name, email, message } = form;
+    if (!name || !email || !message) {
+      setResponseMessage("All fields are required.");
+      setIsSuccess(false); // Set to false for error
+      return false;
+    }
+    return true;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,6 +32,10 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate form before sending
+    if (!validateForm()) return;
+
     setLoading(true);
 
     const payload = {
@@ -39,11 +55,14 @@ const Contact = () => {
 
       if (result.status === 200) {
         setResponseMessage("Message sent successfully!");
+        setIsSuccess(true); // Set to true for success
       } else {
         setResponseMessage("Failed to send the message. Please try again.");
+        setIsSuccess(false); // Set to false for error
       }
     } catch (error) {
       setResponseMessage(`Error: ${error.message}`);
+      setIsSuccess(false); // Set to false for error
     } finally {
       setLoading(false);
       setForm({
@@ -53,6 +72,17 @@ const Contact = () => {
       });
     }
   };
+
+  // Automatically hide the response message after 10 seconds
+  useEffect(() => {
+    if (responseMessage) {
+      const timer = setTimeout(() => {
+        setResponseMessage("");
+      }, 10000);
+
+      return () => clearTimeout(timer); // Cleanup timer on unmount or responseMessage change
+    }
+  }, [responseMessage]);
 
   return (
     <div className="border-b border-neutral-900 pb-20">
@@ -135,7 +165,17 @@ const Contact = () => {
           {loading ? "Sending..." : "Send"}
         </motion.button>
       </motion.form>
-      {responseMessage && <p className="text-center mt-4">{responseMessage}</p>}
+
+      {responseMessage && (
+        <p
+          className={`text-center mt-4 ${
+            isSuccess ? "text-green-500" : "text-red-500"
+          }`}
+        >
+          {responseMessage}
+        </p>
+      )}
+
       <div className="text-center tracking-tighter mt-6">
         <motion.p
           whileInView={{ opacity: 1, x: 0 }}
