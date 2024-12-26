@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="w-full lg:w-1/2 lg:p-8">
           <div className="flex justify-center">
             <img
-              className="w-[550px] h-[550px] rounded-2xl"
+              className="w-[550px] rounded-2xl"
               src={profilePicture}
               alt="Aavash Tamang"
             />
