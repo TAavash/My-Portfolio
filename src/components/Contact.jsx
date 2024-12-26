@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 import { CONTACT } from "../constants";
 import { motion } from "motion/react";
 
@@ -23,29 +23,27 @@ const Contact = () => {
     setLoading(true);
 
     const payload = {
-      from: form.email,
-      to: "your-email@example.com", // replace with your actual recipient email
-      subject: `New message from ${form.name}`,
-      text: form.message,
+      from_name: form.name,
+      from_email: form.email,
+      message: form.message,
     };
 
     try {
-      const res = await axios.post("https://api.resend.com/emails", payload, {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer re_2qSn7LBd_Puujy2j1e9qZKqshJzR7QMTo`, // your Resend API key
-        },
-      });
+      // Use EmailJS to send the email
+      const result = await emailjs.send(
+        "service_4moudw9", // Replace with your EmailJS service ID
+        "template_v4jg5w5", // Replace with your EmailJS template ID
+        payload,
+        "aI1dGHBWjatMf9tJ9" // Replace with your EmailJS user ID
+      );
 
-      if (res.status === 200) {
+      if (result.status === 200) {
         setResponseMessage("Message sent successfully!");
       } else {
         setResponseMessage("Failed to send the message. Please try again.");
       }
     } catch (error) {
-      setResponseMessage(
-        `Error: ${error.response ? error.response.data.message : error.message}`
-      );
+      setResponseMessage(`Error: ${error.message}`);
     } finally {
       setLoading(false);
       setForm({
