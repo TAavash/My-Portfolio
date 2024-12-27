@@ -12,7 +12,7 @@ const Navbar = () => {
         <a
           href="/Aavash Tamang Resume.pdf"
           download
-          className="rounded-sm flex items-center justify-center text-[#e5e7eb] hover:bg-opacity-80 transition ease-in-out duration-300"
+          className="rounded-sm flex items-center justify-center text-[#e5e7eb] transition-transform transform hover:scale-110"
         >
           cv
         </a>
