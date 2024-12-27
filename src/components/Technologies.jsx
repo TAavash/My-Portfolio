@@ -1,7 +1,14 @@
 import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { SiMongodb, SiFlutter } from "react-icons/si";
 import { IoLogoCss3, IoLogoJavascript } from "react-icons/io5";
-import { FaHtml5, FaJava, FaPython, FaNodeJs, FaLaravel, FaFigma } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaJava,
+  FaPython,
+  FaNodeJs,
+  FaLaravel,
+  FaFigma,
+} from "react-icons/fa";
 import { GrMysql, GrOracle } from "react-icons/gr";
 import { motion } from "framer-motion";
 

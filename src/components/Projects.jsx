@@ -28,14 +28,11 @@ const Projects = () => {
               className="w-full lg:w-1/4"
             >
               <div className="relative w-full lg:w-60 h-80 overflow-hidden rounded-lg bg-neutral-800 dark:bg-neutral-700 shadow-md">
-                {/* Image with better fit */}
                 <img
                   src={project.image}
                   alt={project.title}
                   className="absolute top-0 left-0 w-full h-full object-contain transition-transform duration-300 ease-in-out hover:scale-110"
                 />
-
-                {/* Bottom section with hover animation */}
                 <motion.div
                   className="absolute bottom-0 w-full h-1/4 bg-neutral-900 dark:bg-neutral-800 flex items-center justify-center opacity-90 group"
                   initial={{ opacity: 0.9 }}
@@ -45,10 +42,9 @@ const Projects = () => {
                   }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                  {/* View Source Code Button on hover */}
                   <div className="group-hover:flex hidden transition-all">
                     <a
-                      href={project.source_code_link} // Replace with your source code link
+                      href={project.source_code_link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-2 text-white font-semibold rounded-lg hover:underline"
@@ -56,8 +52,6 @@ const Projects = () => {
                       View Source Code
                     </a>
                   </div>
-
-                  {/* Text as fallback */}
                   <p className="text-sm font-semibold text-neutral-400 dark:text-neutral-300 group-hover:hidden">
                     {project.title}
                   </p>
@@ -76,7 +70,9 @@ const Projects = () => {
               <h6 className="mb-2 font-semibold text-neutral-900 dark:text-neutral-100">
                 {project.title}
               </h6>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300">{project.description}</p>
+              <p className="mb-4 text-neutral-700 dark:text-neutral-300">
+                {project.description}
+              </p>
               {project.technologies.map((tech, index) => (
                 <span
                   key={index}

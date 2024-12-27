@@ -12,9 +12,8 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false); // New state to track success or failure
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  // Validation function
   const validateForm = () => {
     const { name, email, message } = form;
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -41,7 +40,6 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate form before sending
     if (!validateForm()) return;
 
     setLoading(true);
@@ -55,22 +53,22 @@ const Contact = () => {
     try {
       // Use EmailJS to send the email
       const result = await emailjs.send(
-        "service_4moudw9", // Replace with your EmailJS service ID
-        "template_v4jg5w5", // Replace with your EmailJS template ID
+        "service_4moudw9", // EmailJS service ID
+        "template_v4jg5w5", // EmailJS template ID
         payload,
-        "aI1dGHBWjatMf9tJ9" // Replace with your EmailJS user ID
+        "aI1dGHBWjatMf9tJ9" // EmailJS user ID
       );
 
       if (result.status === 200) {
         setResponseMessage("Message sent successfully!");
-        setIsSuccess(true); // Set to true for success
+        setIsSuccess(true);
       } else {
         setResponseMessage("Failed to send the message. Please try again.");
-        setIsSuccess(false); // Set to false for error
+        setIsSuccess(false);
       }
     } catch (error) {
       setResponseMessage(`Error: ${error.message}`);
-      setIsSuccess(false); // Set to false for error
+      setIsSuccess(false);
     } finally {
       setLoading(false);
       setForm({
@@ -88,7 +86,7 @@ const Contact = () => {
         setResponseMessage("");
       }, 10000);
 
-      return () => clearTimeout(timer); // Cleanup timer on unmount or responseMessage change
+      return () => clearTimeout(timer);
     }
   }, [responseMessage]);
 

@@ -8,7 +8,10 @@ const About = () => {
     <div className="border-b border-neutral-800 dark:border-neutral-800 light:border-neutral-300 pb-4">
       <h2 className="my-20 text-center text-4xl dark:text-white light:text-black">
         About
-        <span className="dark:text-neutral-500 light:text-neutral-700"> Me</span>
+        <span className="dark:text-neutral-500 light:text-neutral-700">
+          {" "}
+          Me
+        </span>
       </h2>
       <div className="flex flex-wrap">
         <motion.div
