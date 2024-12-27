@@ -25,7 +25,8 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleDarkMode}
-      className="fixed bottom-4 right-4 p-2 rounded-full light:bg-black light:text-white dark:bg-white dark:text-black"
+      className="fixed bottom-4 right-4 p-2 rounded-full light:bg-black light:text-white dark:bg-white dark:text-black
+      transition-transform transform hover:scale-110 shadow-md shadow-neutral-600 "
     >
       {darkMode ? <FaMoon /> : <FaSun />}
     </button>
