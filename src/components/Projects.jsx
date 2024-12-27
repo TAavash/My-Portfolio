@@ -3,15 +3,15 @@ import { motion } from "motion/react";
 
 const Projects = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
+    <div className="border-b border-neutral-800 dark:border-neutral-800 light:border-neutral-300 pb-4">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
         viewport={{
-          once:true,
+          once: true,
         }}
-        className="my-20 text-center text-4xl"
+        className="my-20 text-center text-4xl text-neutral-900 dark:text-neutral-100"
       >
         Projects
       </motion.h2>
@@ -23,11 +23,11 @@ const Projects = () => {
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
               viewport={{
-                once:true,
+                once: true,
               }}
               className="w-full lg:w-1/4"
             >
-              <div className="relative w-full lg:w-60 h-80 overflow-hidden rounded-lg bg-neutral-800 shadow-md">
+              <div className="relative w-full lg:w-60 h-80 overflow-hidden rounded-lg bg-neutral-800 dark:bg-neutral-700 shadow-md">
                 {/* Image with better fit */}
                 <img
                   src={project.image}
@@ -37,13 +37,13 @@ const Projects = () => {
 
                 {/* Bottom section with hover animation */}
                 <motion.div
-                  className="absolute bottom-0 w-full h-1/4 bg-neutral-900 flex items-center justify-center opacity-90 group"
+                  className="absolute bottom-0 w-full h-1/4 bg-neutral-900 dark:bg-neutral-800 flex items-center justify-center opacity-90 group"
                   initial={{ opacity: 0.9 }}
                   whileHover={{ opacity: 1 }}
                   viewport={{
-                    once:true,
+                    once: true,
                   }}
-                  transition={{ duration: 0.5 , delay: 0.5 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
                 >
                   {/* View Source Code Button on hover */}
                   <div className="group-hover:flex hidden transition-all">
@@ -58,7 +58,7 @@ const Projects = () => {
                   </div>
 
                   {/* Text as fallback */}
-                  <p className="text-sm font-semibold text-neutral-400 group-hover:hidden">
+                  <p className="text-sm font-semibold text-neutral-400 dark:text-neutral-300 group-hover:hidden">
                     {project.title}
                   </p>
                 </motion.div>
@@ -69,16 +69,18 @@ const Projects = () => {
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 1 }}
               viewport={{
-                once:true,
+                once: true,
               }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
-              <p className="mb-4 text-neutral-400">{project.description}</p>
+              <h6 className="mb-2 font-semibold text-neutral-900 dark:text-neutral-100">
+                {project.title}
+              </h6>
+              <p className="mb-4 text-neutral-700 dark:text-neutral-300">{project.description}</p>
               {project.technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900"
+                  className="mr-2 rounded bg-neutral-300 dark:bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800 dark:text-purple-300"
                 >
                   {tech}
                 </span>

@@ -1,14 +1,14 @@
 import aboutImg from "../assets/about.jpg";
 import { ABOUT_TEXT } from "../constants";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 
 const About = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
-      <h2 className="my-20 text-center text-4xl">
+    <div className="border-b border-neutral-800 dark:border-neutral-800 light:border-neutral-300 pb-4">
+      <h2 className="my-20 text-center text-4xl dark:text-white light:text-black">
         About
-        <span className="text-neutral-500"> Me</span>
+        <span className="dark:text-neutral-500 light:text-neutral-700"> Me</span>
       </h2>
       <div className="flex flex-wrap">
         <motion.div
@@ -28,7 +28,11 @@ const About = () => {
                 speed: 150,
               }}
             >
-              <img className="rounded-2xl p-2" src={aboutImg} alt="about" />
+              <img
+                className="rounded-2xl p-2 dark:border-neutral-900 light:border-neutral-300"
+                src={aboutImg}
+                alt="about"
+              />
             </Tilt>
           </div>
         </motion.div>
@@ -42,7 +46,9 @@ const About = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl p-2 py-6">{ABOUT_TEXT}</p>
+            <p className="my-2 max-w-xl p-2 py-6 dark:text-neutral-300 light:text-neutral-900">
+              {ABOUT_TEXT}
+            </p>
           </div>
         </motion.div>
       </div>

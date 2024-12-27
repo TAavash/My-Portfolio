@@ -13,13 +13,21 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false); // New state to track success or failure
-  
+
   // Validation function
   const validateForm = () => {
     const { name, email, message } = form;
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
     if (!name || !email || !message) {
       setResponseMessage("All fields are required.");
-      setIsSuccess(false); // Set to false for error
+      setIsSuccess(false);
+      return false;
+    }
+
+    if (!emailRegex.test(email)) {
+      setResponseMessage("Please enter a valid email address.");
+      setIsSuccess(false);
       return false;
     }
     return true;
@@ -91,9 +99,9 @@ const Contact = () => {
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
         viewport={{
-          once:true,
+          once: true,
         }}
-        className="my-6 text-center text-3xl"
+        className="my-6 text-center text-3xl text-gray-900 dark:text-white"
       >
         Get in Touch
       </motion.h2>
@@ -105,7 +113,7 @@ const Contact = () => {
         initial={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{
-          once:true,
+          once: true,
         }}
       >
         <motion.label
@@ -114,18 +122,20 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{
-            once:true,
+            once: true,
           }}
         >
-          <span className="text-white font-medium mb-2">Your Name</span>
+          <span className="text-gray-900 dark:text-white font-medium mb-2">
+            Your Name
+          </span>
           <input
             type="text"
             name="name"
             value={form.name}
             onChange={handleChange}
             placeholder="What's your name?"
-            className="bg-tertiary py-3 px-4 placeholder:text-secondary 
-              text-black rounded-lg outline-none border-none font-medium"
+            className="bg-gray-100 dark:bg-neutral-800 py-3 px-4 placeholder:text-gray-600 dark:placeholder:text-neutral-400 
+              text-black dark:text-white rounded-lg outline-none border-none font-medium"
           />
         </motion.label>
         <motion.label
@@ -134,18 +144,20 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
           viewport={{
-            once:true,
+            once: true,
           }}
         >
-          <span className="text-white font-medium mb-2">Your Email</span>
+          <span className="text-gray-900 dark:text-white font-medium mb-2">
+            Your Email
+          </span>
           <input
             type="email"
             name="email"
             value={form.email}
             onChange={handleChange}
             placeholder="What's your email?"
-            className="bg-tertiary py-3 px-4 placeholder:text-secondary 
-              text-black rounded-lg outline-none border-none font-medium"
+            className="bg-gray-100 dark:bg-neutral-800 py-3 px-4 placeholder:text-gray-600 dark:placeholder:text-neutral-400 
+              text-black dark:text-white rounded-lg outline-none border-none font-medium"
           />
         </motion.label>
         <motion.label
@@ -154,30 +166,33 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
           viewport={{
-            once:true,
+            once: true,
           }}
         >
-          <span className="text-white font-medium mb-2">Your Message</span>
+          <span className="text-gray-900 dark:text-white font-medium mb-2">
+            Your Message
+          </span>
           <textarea
             rows="5"
             name="message"
             value={form.message}
             onChange={handleChange}
             placeholder="What do you want to say?"
-            className="bg-tertiary py-3 px-4 placeholder:text-secondary 
-              text-black rounded-lg outline-none border-none font-medium"
+            className="bg-gray-100 dark:bg-neutral-800 py-3 px-4 placeholder:text-gray-600 dark:placeholder:text-neutral-400 
+              text-black dark:text-white rounded-lg outline-none border-none font-medium"
           />
         </motion.label>
 
         <motion.button
           type="submit"
-          className="bg-tertiary py-2 px-6 outline-none w-fit text-white 
+          className="bg-gray-900 dark:bg-primary py-2 px-6 outline-none w-fit text-white 
             font-bold shadow-md shadow-primary rounded-xl"
+          disabled={loading}
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
           viewport={{
-            once:true,
+            once: true,
           }}
         >
           {loading ? "Sending..." : "Send"}
@@ -186,6 +201,7 @@ const Contact = () => {
 
       {responseMessage && (
         <p
+          aria-live="polite"
           className={`text-center mt-4 ${
             isSuccess ? "text-green-500" : "text-red-500"
           }`}
@@ -200,9 +216,9 @@ const Contact = () => {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
           viewport={{
-            once:true,
+            once: true,
           }}
-          className="my-2"
+          className="my-2 text-gray-900 dark:text-white"
         >
           {CONTACT.address}
         </motion.p>
@@ -211,13 +227,16 @@ const Contact = () => {
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1 }}
           viewport={{
-            once:true,
+            once: true,
           }}
-          className="my-2"
+          className="my-2 text-gray-900 dark:text-white"
         >
           {CONTACT.phoneNo}
         </motion.p>
-        <a href="#" className="border-b">
+        <a
+          href="#"
+          className="border-b light:border-gray-900 text-gray-900 dark:text-white"
+        >
           {CONTACT.email}
         </a>
       </div>

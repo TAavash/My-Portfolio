@@ -1,6 +1,6 @@
 import { HERO_CONTENT } from "../constants";
 import profilePicture from "../assets/aavash.png";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -13,7 +13,7 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
+    <div className="border-b border-neutral-800 pb-4 lg:mb-35 light:border-neutral-300">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -24,7 +24,7 @@ const Hero = () => {
               viewport={{
                 once: true,
               }}
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl dark:text-neutral-300 light:text-neutral-900"
             >
               Aavash Tamang
             </motion.h1>
@@ -33,7 +33,7 @@ const Hero = () => {
               initial="hidden"
               animate="visible"
               className="bg-gradient-to-r from-red-300 via-slate-500 to-purple-500 
-                bg-clip-text text-3xl tracking-tight text-transparent"
+                bg-clip-text text-3xl tracking-tight text-transparent light:from-blue-500 light:via-green-500 light:to-yellow-500"
             >
               Full Stack Developer
             </motion.span>
@@ -41,7 +41,7 @@ const Hero = () => {
               variants={container(1)}
               initial="hidden"
               animate="visible"
-              className="my-2 max-w-xl py-6 font-light tracking-tighter"
+              className="my-2 max-w-xl py-6 font-light tracking-tighter dark:text-neutral-300 light:text-neutral-700"
             >
               {HERO_CONTENT}
             </motion.p>

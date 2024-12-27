@@ -1,4 +1,5 @@
 import logo from "../assets/logo-no-bg.png";
+import logocolor from "../assets/logo-color.png";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { SOCIALLINKS } from "../constants";
 
@@ -12,7 +13,10 @@ const Navbar = () => {
         <a
           href="/Aavash Tamang Resume.pdf"
           download
-          className="rounded-sm flex items-center justify-center text-[#e5e7eb] transition-transform transform hover:scale-110"
+          className="rounded-sm flex items-center justify-center 
+                bg-gradient-to-r from-red-300 via-slate-500 to-purple-500 
+                bg-clip-text text-3xl tracking-tight text-transparent light:from-blue-500 light:via-green-500 light:to-yellow-500 
+                transition-transform transform hover:scale-110"
         >
           cv
         </a>
@@ -20,7 +24,7 @@ const Navbar = () => {
           href={SOCIALLINKS.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-transform transform hover:scale-110"
+          className="transition-transform transform hover:scale-110 text-gray-900 dark:text-gray-100"
         >
           <FaLinkedin />
         </a>
@@ -28,7 +32,7 @@ const Navbar = () => {
           href={SOCIALLINKS.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-transform transform hover:scale-110"
+          className="transition-transform transform hover:scale-110 text-gray-900 dark:text-gray-100"
         >
           <FaGithub />
         </a>
@@ -36,7 +40,7 @@ const Navbar = () => {
           href={SOCIALLINKS.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-transform transform hover:scale-110"
+          className="transition-transform transform hover:scale-110 text-gray-900 dark:text-gray-100"
         >
           <FaInstagram />
         </a>
