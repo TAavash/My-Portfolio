@@ -1,5 +1,5 @@
-import logo from "../assets/logo-no-bg.png";
-import logocolor from "../assets/logo-color.png";
+import logo from "../assets/logo-no-bg.png"; 
+import logocolor from "../assets/logo-light.png"; 
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { SOCIALLINKS } from "../constants";
 
@@ -7,7 +7,16 @@ const Navbar = () => {
   return (
     <nav className="mb-20 flex items-center justify-between py-6">
       <div className="flex flex-shrink-0 items-center">
-        <img className="w-10 mx-2" src={logo} alt="logo" />
+        <img 
+          className="w-10 mx-2 dark:hidden" 
+          src={logocolor} 
+          alt="color logo" 
+        />
+        <img 
+          className="w-10 mx-2 hidden dark:block" 
+          src={logo} 
+          alt="no bg logo" 
+        />
       </div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         <a
