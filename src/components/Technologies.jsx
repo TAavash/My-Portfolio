@@ -1,6 +1,8 @@
 import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
-import { FaHtml5, FaJava, FaPython, FaNodeJs } from "react-icons/fa";
+import { SiMongodb, SiFlutter } from "react-icons/si";
+import { IoLogoCss3, IoLogoJavascript } from "react-icons/io5";
+import { FaHtml5, FaJava, FaPython, FaNodeJs, FaLaravel, FaFigma } from "react-icons/fa";
+import { GrMysql, GrOracle } from "react-icons/gr";
 import { motion } from "motion/react";
 
 const iconVariants = (duration) => ({
@@ -40,44 +42,20 @@ const Technologies = () => {
         className="flex flex-wrap items-center justify-center gap-4"
       >
         <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaHtml5 className="text-7xl text-orange-500" />
-        </motion.div>
-        <motion.div
           variants={iconVariants(3)}
           initial="initial"
           animate="animate"
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <RiReactjsLine className="text-7xl text-cyan-400" />
+          <FaHtml5 className="text-5xl text-orange-500" />
         </motion.div>
         <motion.div
-          variants={iconVariants(5)}
+          variants={iconVariants(2.5)}
           initial="initial"
           animate="animate"
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <SiMongodb className="text-7xl text-green-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <RiTailwindCssFill className="text-7xl text-cyan-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(6)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaNodeJs className="text-7xl text-green-400" />
+          <IoLogoCss3 className="text-5xl text-blue-500" />
         </motion.div>
         <motion.div
           variants={iconVariants(4)}
@@ -85,15 +63,95 @@ const Technologies = () => {
           animate="animate"
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <FaJava className="text-7xl text-red-400" />
+          <IoLogoJavascript className="text-5xl text-yellow-400" />
         </motion.div>
         <motion.div
-          variants={iconVariants(4.5)}
+          variants={iconVariants(3.5)}
           initial="initial"
           animate="animate"
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <FaPython className="text-7xl text-yellow-400" />
+          <RiReactjsLine className="text-5xl text-cyan-400" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(5)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <SiMongodb className="text-5xl text-green-400" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <RiTailwindCssFill className="text-5xl text-cyan-400" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(4)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <FaPython className="text-5xl text-yellow-400" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.5)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <FaJava className="text-5xl text-red-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(3)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <SiFlutter className="text-5xl text-cyan-400" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(4)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <FaFigma  className="text-5xl text-red-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(5)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <FaNodeJs className="text-5xl text-green-400" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <FaLaravel className="text-5xl text-red-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(3)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <GrMysql className="text-5xl text-blue-400" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <GrOracle className="text-5xl text-red-500" />
         </motion.div>
       </motion.div>
     </div>
