@@ -10,6 +10,13 @@ const Navbar = () => {
       </div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         <a
+          href="/Aavash Tamang Resume.pdf"
+          download
+          className="rounded-sm flex items-center justify-center text-[#e5e7eb] hover:bg-opacity-80 transition ease-in-out duration-300"
+        >
+          cv
+        </a>
+        <a
           href={SOCIALLINKS.linkedin}
           target="_blank"
           rel="noopener noreferrer"

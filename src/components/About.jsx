@@ -1,6 +1,6 @@
 import aboutImg from "../assets/about.jpg";
 import { ABOUT_TEXT } from "../constants";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Tilt } from "react-tilt";
 
 const About = () => {
