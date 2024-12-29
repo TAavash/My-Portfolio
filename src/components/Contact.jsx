@@ -91,7 +91,7 @@ const Contact = () => {
   }, [responseMessage]);
 
   return (
-    <div className="border-b border-neutral-900 pb-20">
+    <div className="border-b border-neutral-800 light:border-neutral-300 dark:border-neutral-800 pb-20">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
