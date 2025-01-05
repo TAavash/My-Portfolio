@@ -44,7 +44,7 @@ export const PROJECTS = [
     technologies: ["Java", "MySQL"],
 
     source_code_link:
-      "https://github.com/TAavash/Eclipse-Workspace/tree/main/java_project",
+      "https://github.com/TAavash/Hotel-Booking-System",
   },
   {
     title: "Taxi Booking System",
