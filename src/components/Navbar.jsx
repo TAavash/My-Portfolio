@@ -1,6 +1,7 @@
 import logo from "../assets/logo-no-bg.png";
 import logocolor from "../assets/logo-light.png";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { SiKofi } from "react-icons/si";
 import { SOCIALLINKS } from "../constants";
 
 const Navbar = () => {
@@ -46,12 +47,12 @@ const Navbar = () => {
           <FaGithub />
         </a>
         <a
-          href={SOCIALLINKS.instagram}
+          href={SOCIALLINKS.ko_fi}
           target="_blank"
           rel="noopener noreferrer"
           className="transition-transform transform hover:scale-110 text-gray-900 dark:text-gray-100"
         >
-          <FaInstagram />
+          <SiKofi />
         </a>
       </div>
     </nav>

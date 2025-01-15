@@ -8,6 +8,7 @@ export const SOCIALLINKS = {
   linkedin: "https://www.linkedin.com/in/aavash-tamang-131a0a2b5/",
   github: "https://github.com/TAavash",
   instagram: "https://www.instagram.com/aavashtamang10/",
+  ko_fi: "https://ko-fi.com/aavashtamang",
 };
 
 
