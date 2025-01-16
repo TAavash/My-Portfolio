@@ -103,6 +103,24 @@ const Contact = () => {
       >
         Get in Touch
       </motion.h2>
+      <motion.p
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.5 }}
+        viewport={{
+          once: true,
+        }}
+        className="my-6 text-center text-lg text-gray-900/80 dark:text-white/80"
+      >
+        Please contact me directly at{" "}
+        <span
+          className=" bg-gradient-to-r from-red-300 via-slate-500 to-purple-500 
+                bg-clip-text tracking-tight text-transparent light:from-blue-500 light:via-green-500 light:to-yellow-500"
+        >
+          {CONTACT.email}
+        </span>{" "}
+        or through this form.
+      </motion.p>
       <motion.form
         ref={formRef}
         onSubmit={handleSubmit}
