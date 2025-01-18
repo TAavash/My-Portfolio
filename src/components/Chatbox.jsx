@@ -126,7 +126,7 @@ const Chatbox = () => {
         onClick={() => setIsOpen(true)}
       >
         <img
-          src="/public/aavash.png"
+          src="/aavash.png"
           width={44}
           height={44}
           alt="Profile Picture"
