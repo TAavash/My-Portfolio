@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Chatbox from "./components/Chatbox";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
@@ -26,6 +27,7 @@ const App = () => {
         <Experience />
         <Projects />
         <Contact />
+        <Chatbox />
         <ThemeToggle />
         <Footer />
       </div>
