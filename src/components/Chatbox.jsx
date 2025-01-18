@@ -143,7 +143,7 @@ const Chatbox = () => {
           >
             <div className="flex items-center gap-[20px]">
               <img
-                src="/public/aavash.png"
+                src="/aavash.png"
                 width={38}
                 height={38}
                 alt="Profile Picture"
