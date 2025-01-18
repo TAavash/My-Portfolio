@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { BsSendFill } from "react-icons/bs";
 
 const Chatbox = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -192,10 +193,10 @@ const Chatbox = () => {
                 }}
               />
               <button
-                className="bg-red-600 text-white p-2 rounded-lg ml-2"
+                className="bg-gray-900 text-white dark:bg-white dark:text-gray-900 p-2 rounded-lg ml-4"
                 onClick={handleSendMessage}
               >
-                Send
+                <BsSendFill/>
               </button>
             </div>
 
