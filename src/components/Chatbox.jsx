@@ -120,7 +120,7 @@ const Chatbox = () => {
   return (
     <div className="relative z-[5000] dark:bg-gray-900">
       <div
-        className={`fixed bottom-[70px] right-3 bg-white dark:bg-gray-700 rounded-full shadow-lg cursor-pointer hover:scale-[1.15] ${
+        className={`fixed bottom-[70px] right-3 bg-white dark:bg-gray-700 rounded-full shadow-md shadow-neutral-600 cursor-pointer hover:scale-[1.15] ${
           isOpen ? "hidden" : "flex"
         }`}
         onClick={() => setIsOpen(true)}
@@ -135,7 +135,7 @@ const Chatbox = () => {
       </div>
 
       {isOpen && (
-        <div className="fixed bottom-[2vh] right-[2vw] h-10 w-10 sm:bottom-[80px] sm:right-5 sm:w-80 sm:h-[350px] md:h-[450px] bg-gray-100 dark:bg-gray-800 rounded-t-lg shadow-lg flex flex-col">
+        <div className="fixed bottom-[2vh] right-[2vw] h-10 w-10 sm:bottom-[80px] sm:right-5 sm:w-80 sm:h-[350px] md:h-[450px] bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg flex flex-col">
           <div
             className="bg-gradient-to-r from-red-500 via-slate-500 to-purple-500 
                  light:from-blue-500 light:via-green-500 light:to-yellow-500
@@ -159,7 +159,7 @@ const Chatbox = () => {
             </button>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-3 dark:bg-gray-900">
+          <div className="flex-1 overflow-y-auto scrollbar-thin p-3 dark:bg-gray-900">
             {messages.map((msg, index) => (
               <div
                 key={index}
@@ -177,7 +177,7 @@ const Chatbox = () => {
 
           <div
             className="bg-gradient-to-r from-red-500 via-slate-500 to-purple-500 
-                 light:from-blue-500 light:via-green-500 light:to-yellow-500 
+                 light:from-blue-500 light:via-green-500 light:to-yellow-500 rounded-b-lg
                  p-3 pb-1 gap-1 flex flex-col items-center"
           >
             <div className="flex items-center">
@@ -192,7 +192,7 @@ const Chatbox = () => {
                 }}
               />
               <button
-                className="bg-red-500 dark:bg-red-700 text-white p-2 rounded-lg ml-2"
+                className="bg-red-600 text-white p-2 rounded-lg ml-2"
                 onClick={handleSendMessage}
               >
                 Send
