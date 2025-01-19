@@ -136,7 +136,7 @@ const Chatbox = () => {
       </div>
 
       {isOpen && (
-        <div className="fixed bottom-[2vh] right-[2vw] h-10 w-10 sm:bottom-[80px] sm:right-5 sm:w-80 sm:h-[350px] md:h-[450px] bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg flex flex-col">
+        <div className="fixed bottom-[80px] right-[2vw] w-80 h-[350px] sm:h-[450px] max-w-[90%] md:h-[450px] bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg flex flex-col">
           <div
             className="bg-gradient-to-r from-red-500 via-slate-500 to-purple-500 
                  light:from-blue-500 light:via-green-500 light:to-yellow-500
@@ -178,13 +178,13 @@ const Chatbox = () => {
 
           <div
             className="bg-gradient-to-r from-red-500 via-slate-500 to-purple-500 
-                 light:from-blue-500 light:via-green-500 light:to-yellow-500 rounded-b-lg
-                 p-3 gap-1 flex flex-col items-center"
+             light:from-blue-500 light:via-green-500 light:to-yellow-500 
+             rounded-b-lg p-3 gap-2 flex flex-col sm:flex-row items-center"
           >
-            <div className="flex items-center">
+            <div className="flex items-center w-full sm:w-auto gap-2">
               <input
                 type="text"
-                className="flex-1 p-2 rounded-lg dark:bg-gray-700 light:bg-gray-200 dark:text-white light:text-black"
+                className="flex-1 p-2 rounded-lg dark:bg-gray-700 bg-gray-200 dark:text-white text-black w-full sm:w-auto"
                 placeholder="Write a message..."
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
@@ -193,14 +193,12 @@ const Chatbox = () => {
                 }}
               />
               <button
-                className="bg-gray-900 text-white dark:bg-white dark:text-gray-900 p-2 rounded-lg ml-4"
+                className="bg-gray-900 text-white dark:bg-white dark:text-gray-900 p-2 rounded-lg"
                 onClick={handleSendMessage}
               >
-                <BsSendFill/>
+                <BsSendFill />
               </button>
             </div>
-
-            
           </div>
         </div>
       )}
