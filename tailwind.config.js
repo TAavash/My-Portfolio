@@ -8,7 +8,20 @@ export default {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        spin: 'spin 1.5s linear infinite', // Default spin for general use
+        'spin-slow': 'spin-slow 4s linear infinite', // Custom slow spin for the loader
+      },
+      keyframes: {
+        spin: {
+          to: { transform: 'rotate(360deg)' }, // Default spin keyframe
+        },
+        'spin-slow': {
+          to: { transform: 'rotate(360deg)' }, // Slow spin keyframe
+        },
+      },
+    },
   },
   variants: {
     extend: {

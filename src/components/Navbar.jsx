@@ -1,6 +1,6 @@
 import logo from "../assets/logo-no-bg.png";
 import logocolor from "../assets/logo-light.png";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiKofi } from "react-icons/si";
 import { SOCIALLINKS } from "../constants";
 
