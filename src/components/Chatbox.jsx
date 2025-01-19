@@ -179,7 +179,7 @@ const Chatbox = () => {
           <div
             className="bg-gradient-to-r from-red-500 via-slate-500 to-purple-500 
                  light:from-blue-500 light:via-green-500 light:to-yellow-500 rounded-b-lg
-                 p-3 pb-1 gap-1 flex flex-col items-center"
+                 p-3 gap-1 flex flex-col items-center"
           >
             <div className="flex items-center">
               <input
@@ -200,14 +200,7 @@ const Chatbox = () => {
               </button>
             </div>
 
-            <div className="text-xs py-[2px] text-white">
-              Powered by{" "}
-              <span className="font-bold cursor-pointer">
-                <a href="https://aifagoon.com/" target="_blank">
-                  Fagoon AI
-                </a>
-              </span>
-            </div>
+            
           </div>
         </div>
       )}
